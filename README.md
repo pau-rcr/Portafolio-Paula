@@ -5,25 +5,54 @@ Este es un proyecto de portafolio personal desarrollado con React, TypeScript, R
 ## Características
 
 - **Arquitectura Atómica**: Componentes organizados en atoms, molecules, organisms y layouts
-- **React Router**: Navegación entre páginas (Presentación y Contacto)
+- **React Router**: Navegación entre páginas (Presentación, Proyectos y Contacto)
 - **Diseño Responsivo**: Grid y Flexbox para adaptarse a diferentes dispositivos
 - **Componente Dinámico**: Generador de citas inspiradoras aleatorias
 - **TypeScript**: Tipado estático para mayor seguridad
 
 ## Escructura del Proyecto
 
-```
-src/
-├── components/
-│   ├── atoms/          # Componentes básicos (Button, Card, Text)
-│   ├── molecules/      # Combinación de atoms (SkillLevel, ContactItem, QuoteGenerator)
-│   ├── organisms/      # Componentes complejos (ProfileCard, ContactInfo)
-│   └── layouts/        # Layouts de página (MainLayout)
-├── pages/              # Páginas de la aplicación
-│   ├── Presentation.tsx
-│   └── Contact.tsx
-└── assets/             # Recursos estáticos
-```
+El proyecto está organizado para seguir buenas prácticas modernas de React y el principio de Atomic Design, facilitando la escalabilidad, mantenibilidad y la realización de pruebas unitarias.
+
+src/assets
+Contiene los recursos gráficos del portafolio, como la foto de perfil (profile-photo.jpg).
+
+src/components
+
+atoms
+Componentes mínimos y reutilizables (por ejemplo: Button.tsx, Card.tsx, Text.tsx). Incluye subcarpeta __tests__ para pruebas de cada átomo individual.
+
+layouts
+Componentes de estructura general de las páginas, como MainLayout.tsx.
+
+molecules
+Combinaciones de átomos para crear piezas funcionales intermedias, como ContactItem.tsx, ProjectCard.tsx, QuoteGenerator.tsx y SkillLevel.tsx. Incluye carpeta __tests__.
+
+organisms
+Componentes de mayor complejidad que agrupan moléculas y átomos, por ejemplo: ProfileCard.tsx, ContactInfo.tsx, ProjectsGrid.tsx. También incluye carpeta de test específico.
+
+ui
+Componentes visuales reutilizables generales.
+
+src/lib
+Funciones auxiliares, utilidades técnicas y la configuración de testing (utils.ts, carpeta __tests__).
+
+src/test
+Archivos y configuración global para pruebas unitarias (setup.ts).
+
+src/app
+
+Subcarpetas para cada página principal: contact, notfound, presentation, projects, routes.
+
+Cada página tiene un archivo principal (por ejemplo: presentation.tsx, projects.tsx) y sus tests asociados (Contact.test.tsx, Projects.test.tsx, etc.).
+
+Carpeta routes para manejo y definición de navegaciones mediante React Router (home.tsx, contacto.tsx, notfound.tsx, proyectos.tsx).
+
+Archivo general del layout para la app (root.tsx).
+
+src/App.tsx, index.css, main.tsx, vite-env.d.ts
+Archivos raíz para el manejo global del proyecto, estilos y configuración de entorno.
+
 
 ## Páginas
 
@@ -31,8 +60,22 @@ src/
 
 - Foto de perfil
 - Carta de presentación
-- Nivel de conocimientos (barras de progreso)
+- Áreas de conocimiento
 - Certificaciones
+
+###Proyectos (/proyectos)
+
+- Listado visual de proyectos personales y profesionales en tarjetas.
+
+- Cada tarjeta muestra:
+
+    - Nombre del proyecto, tipo (web, backend, base de datos)
+
+    - Descripción breve del proyecto
+
+    - Iconos distintivos e integración con GitHub por cada proyecto
+
+- Diseño organizado en grillas responsivas que se adaptan a diferentes pantallas.
 
 ### Contacto (/contacto)
 
@@ -67,11 +110,9 @@ El diseño utiliza:
 
 ## Sistema de Diseño
 
-- Paleta de colores moderna (morado/azul)
+- Paleta de colores moderna (morado y azul)
 - Gradientes sutiles
 - Sombras consistentes
-- Animaciones suaves
-- Tokens de diseño centralizados
 
 ## Instalación y Uso
 
@@ -89,7 +130,7 @@ npm run build
 
 ```bash
 # Realizar tests
-npm run tests
+npm run test
 
 # Ejecutar Coverage
 npm run coverage
@@ -107,4 +148,4 @@ Este proyecto fue desarrollado siguiendo las mejores prácticas de React:
 
 ---
 
-Desarrollado para Fullstack 2 - 2025
+Desarrollado para Fullstack 2 Duoc UC - 2025
