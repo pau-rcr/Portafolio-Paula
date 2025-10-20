@@ -63,7 +63,7 @@ Archivos raíz para el manejo global del proyecto, estilos y configuración de e
 - Áreas de conocimiento
 - Certificaciones
 
-###Proyectos (/proyectos)
+### Proyectos (/proyectos)
 
 - Listado visual de proyectos personales y profesionales en tarjetas.
 
